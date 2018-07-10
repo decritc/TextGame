@@ -1,0 +1,403 @@
+PROGRAM NAME: Project 4, CSCI 20, Spring 2016
+PROGRAMMER:   Derek Critchfield
+DATE:         17 May 2016
+
+FILES IN PROJECT:
+
+Main.cpp [driver]
+GameManager.hpp
+GameManager.cpp
+Items.txt
+Rooms.txt
+Enemies.txt
+Item.hpp
+Item.cpp
+Player.hpp
+Player.cpp
+Enemy.hpp
+Enemy.cpp
+Map.hpp
+Map.cpp
+Room.hpp
+Room.cpp
+OtherFunctions.hpp
+OtherFuncitons.cpp
+CinReader.h
+CinReader.cpp
+
+-------------------------------------------------------------------------------
+/***** Main Function *****/
+FILES: main.cpp
+
+DESCRIPTION: This function is the main driver for the game loop. Creates the
+instance of the GameManager and Player calls the game loop function playGame
+and passes the player. Deletes the player and checks the results of the playGame
+fuction to determine if the user decides to continue playing
+
+PROPERTIES:
+
+bool continueGame
+
+-------------------------------------------------------------------------------
+/***** Class GameManager *****/
+FILES: GameManager.hpp GameMaanger.cpp
+
+DESCRIPTION: This class Contains the main game loop handling all user interaction
+as well as damage calculations for fights and returns to the main loop when player
+dies within the playGame fuction. Additional breakdown of how it works is within
+the implementation file.
+
+PROPERTIES:
+
+Map myMap
+CinReader reader
+string userInput
+int numOfStars
+int randEnemyType
+int randItemType
+Room* lastRoom
+vector<Enemy> currEnemy
+vector<Item> currItem
+OtherFunctions myOtherFunc
+
+CONSTRUCTORS:
+
+GameManager()                   -- sets initial value for the randEnemyType
+                                   and the randItemType to -1.
+
+FUNCTIONS:
+
+bool playGame(Player currPlayer)-- Main game loop handles all user interactions
+
+-------------------------------------------------------------------------------
+/***** TEXT FILE Items *****/
+FILES: Items.txt
+
+DESCRIPTION: A text file holding data for the various items available within
+the game.
+
+-------------------------------------------------------------------------------
+/***** TEXT FILE Rooms *****/
+FILES: Rooms.txt
+
+DESCRIPTION: A text file holding data for the various rooms a player can
+enter within the game.
+
+-------------------------------------------------------------------------------
+/***** TEXT FILE Enemies *****/
+FILES: Rooms.txt
+
+DESCRIPTION: A text file holding data for the various enemies within the game.
+
+-------------------------------------------------------------------------------
+/***** Class Player *****/
+FILES: Player.hpp Player.cpp
+
+DESCRIPTION: This class manages the player attributes and inventory. Has
+functions to display the users attributes and inventory and functions for
+adding items to the players inventory while maintaining capacity limits.
+
+PROPERTIES:
+
+string name
+int maxHealth
+int health
+bool isAlive
+int level
+int armor
+int block
+int attack
+int inventoryCapacity
+vector<Item> inventory
+
+CONSTRUCTORS:
+
+Player()                        -- assigns base attributes for all starting
+players. Also reserves space in the inventory vector for the players
+inventoryCapacity.
+
+FUNCTIONS:
+
+bool addItemToInventory(Item newInventoryItem)-- Adds an item to the players
+inventory returns false if the inventory is at full capacity
+void describe()                 -- prints the players attributes and inventory
+items
+string getName()                -- getter for name property
+void setName(string nName)      -- setter for name property
+int getTotalPossibleHealth()    -- getter for totalPossibleHealth property
+void setTotalPossibleHealth(int nMxHlth)-- setter for totalPossibleHealth
+property
+int getHealth()                 -- getter for health property
+void setHealth(int nHlth)       -- setter for health property
+bool getIsAlive()               -- getter for isAlive property
+void setIsAlive(bool nIsAlive)  -- setter for isAlive property
+int getLevel()                  -- getter for level property
+void setLevel(int nLevel)       -- setter for level property
+int getArmor()                  -- getter for armor property
+void setArmor(int nArm)         -- setter for armor property
+int getBlock()                  -- getter for block property
+void setBlock(int nBlk)         -- setter for block property
+int getAttack()                 -- getter for attack property
+void setAttack(int nAtk)        -- setter for attack property
+int getInventoryCapacity()      -- getter for inventoryCapacity property
+void setInventoryCapacity(int nInvCap)-- setter for inventoryCapacity property
+vector<Item>* getInventoryVector() -- getter for pointer to inventory vector
+
+-------------------------------------------------------------------------------
+/***** CLASS Enemy *****/
+FILES: Enemy.hpp Enemy.cpp
+
+DESCRIPTION: This class is Derived from Player class includes function for
+constructing enemies from a string stream.
+
+PROPERTIES:
+
+string name
+
+CONSTRUCTORS:
+
+Enemy()                         -- empty constructor included for completeness
+
+FUNCTIONS:
+
+void loadEnemy(istringstream& stream)   -- loads enemies from a stringstream
+
+-------------------------------------------------------------------------------
+/***** CLASS Item *****/
+FILES: Item.hpp Item.cpp
+
+DESCRIPTION: This class manages all attributes of items within the game includes
+function to load items from a string stream
+
+PROPERTIES:
+
+string name
+string description
+string openWith
+string combineWith
+bool isEquipable
+bool isEquipped
+bool isDamaged
+bool isUseable
+bool isUsed
+bool isOpenable
+bool isOpen
+int healthAdd
+int armorAdd
+int blockAdd
+int attackAdd
+OtherFunctions myOtherFunc
+
+CONSTRUCTORS:
+
+Item()                          -- sets intial value for name and isEquipped and
+isFalse values to false for new items
+
+FUNCTIONS:
+
+void loadItem(istringstream& stream) -- loads items from a stringstream
+string getName()                    -- getter for name property
+void setName(string nName)          -- setter for name property
+string getDescription()             -- getter for description property
+void setDescription(string nDes)    -- setter for description property
+string getOpenWith()                -- getter for openWith property
+void setOpenWith(string nOpenW)     -- setter for openWith property
+string getCombineWith()             -- getter for combineWith property
+void setCombineWith(string nCombW)  -- setter for combineWith property
+string getLocationType()            -- getter for locationType property
+void setLocationType(string nLocT)  -- setter for locationType property
+bool getIsEquipable()               -- getter for isEquipable property
+void setIsEquipable(bool isE)       -- setter for isEquipable property
+bool getIsEquipped()                -- getter for isEquipped property
+void setIsEquipped(bool isE)        -- setter for isEquipped property
+bool getIsDamaged()                 -- getter for isDamaged property
+void setIsDamaged(bool isD)         -- setter for isDamaged property
+bool getIsUseable()                 -- getter for isUseable property
+void setIsUseable(bool isU)         -- setter for isUseable property
+bool getIsUsed()                    -- getter for isUsed property
+void setIsUsed(bool isUd)           -- setter for isUsed property
+bool getIsOpenable()                -- getter for isOpenable property
+void setIsOpenable(bool isOpenA)    -- setter for isOpenable property
+bool getIsOpen()                    -- getter for isOpen property
+void setIsOpen(bool isOp)           -- setter for isOpen property
+int getHealthAdd()                  -- getter for healthAdd property
+void setHealthAdd(int hlthA)        -- setter for healthAdd property
+int getArmorAdd()                   -- getter for armorAdd property
+void setArmorAdd(int armA)          -- setter for armorAdd property
+int getBlockAdd()                   -- getter for blockAdd property
+void setBlockAdd(int blkA)          -- setter for blockAdd property
+int getAttackAdd()                  -- getter for attackAdd property
+void setAttackAdd(int atkA)         -- setter for attackAdd property
+
+-------------------------------------------------------------------------------
+/***** CLASS Room *****/
+FILES: Room.hpp Room.cpp
+
+DESCRIPTION: This class holds attributes for the rooms used within the game
+includes a fuction to load rooms from a string.
+
+PROPERTIES:
+
+string name
+string description
+Room* enterRoom
+Room* exitRoom1
+Room* exitRoom2
+Room* exitRoom3
+string itemsContained
+string enemiesContained
+int numberItems
+int numberEnemies
+direction enterDirection
+direction exitDirection1
+direction exitDirection2
+direction exitDirection3
+int numberExits
+roomType rType
+int roomCordX
+int roomCordY
+bool hasBeenEntered
+OtherFunctions myOtherFunc
+
+CONSTRUCTORS:
+
+Room()                              -- sets all attributes to empty and
+hasBeenEntered to false
+
+FUNCTIONS:
+
+void loadRoom(istringstream& stream)    -- loads rooms from a stringstream
+string getName()                        -- getter for name property
+void setName(string nName)              -- setter for name property
+string getDescription()                 -- getter for description property
+void setDescription(string nDes)        -- setter for description property
+Room* getEnterRoom()                    -- getter for enterRoom property
+void setEnterRoom(Room* nER)            -- setter for enterRoom property
+Room* getExitRoom1()                    -- getter for exitRoom1 property
+void setExitRoom1(Room* nXR1)           -- setter for exitRoom1 property
+Room* getExitRoom2()                    -- getter for exitRoom2 property
+void setExitRoom2(Room* nXR2)           -- setter for exitRoom2 property
+Room* getExitRoom3()                    -- getter for exitRoom3 property
+void setExitRoom3(Room* nXR3)           -- setter for exitRoom3 property
+string getItemsContained()              -- getter for itemsContained property
+void setItemsContained(string nIC)      -- setter for itemsContained property
+string getEnemiesContained()            -- getter for enemiesContained property
+void setEnemiesContained(string nEC)    -- setter for enemiesContained property
+int getNumberItems()                    -- getter for numberItems property
+void setNumberItems(int nIt)            -- setter for numberItems property
+int getNumberEnemies()                  -- getter for numberEnemies property
+void setNumberEnemies(int nEn)          -- setter for numberEnemies property
+direction getEnterDirection()           -- getter for enterDirection property
+void setEnterDirection(direction nED)   -- setter for enterDirection property
+direction getExitDirection1()           -- getter for exitDirection1 property
+void setExitDirection1(direction nXD1)  -- setter for exitDirection1 property
+direction getExitDirection2()           -- getter for exitDirection2 property
+void setExitDirection2(direction nXD2)  -- setter for exitDirection2 property
+direction getExitDirection3()           -- getter for exitDirection3 property
+void setExitDirection3(direction nXD3)  -- setter for exitDirection3 property
+int getNumberExits()                    -- getter for numberExits property
+void setNumberExits(int nEx)            -- setter for numberExits property
+roomType getRType()                     -- getter for rType property
+void setRType(roomType nRT)             -- setter for rType property
+int getRoomCordX()                      -- getter for roomCordX property
+void setRoomCordX(int nRCX)             -- setter for roomCordX property
+int getRoomCordY()                      -- getter for roomCordY property
+void setRoomCordY(int nRCY)             -- setter for roomCordY property
+bool getHasBeenEntered()                -- getter for hasBeenEntered property
+void setHasBeenEntered(bool nHBE)       -- setter for hasBeenEntered property
+
+-------------------------------------------------------------------------------
+/***** CLASS Map *****/
+FILES: Map.hpp Map.cpp
+
+DESCRIPTION: This class sets up and manages all aspects of the Map and controls
+the room values. Additional details about each function are within the implementation
+file.
+
+PROPERTIES:
+
+vector<Room> lRooms
+vector<Enemy> lEnemies
+vector<Item> lItems
+Room** level
+unsigned const ROW
+unsigned const COLUMN
+unsigned const ATTEMPTMAX
+unsigned int attemptCount
+OtherFunctions myFunctions
+Room newRoom
+Enemy newEnemy
+Item newItem
+Room* roomPtr
+unsigned int numRooms
+unsigned int numEnemies
+unsigned int numItems
+
+CONSTRUCTORS:
+
+Map()                           -- sets the constant values for the row's and
+column's and the maximum attempts to find a path through the room. Sets the
+attemptCount to 0 as well as creates the neccesary pointers to room objects for
+each row and column and places them within level array. Calls functions to load
+the Room, Enemy, and Item vectors.
+
+
+FUNCTIONS:
+
+void loadRooms()                -- private function loads rooms to lRooms vector
+void loadEnemies()              -- private function loads enemies to lEnemies vector
+void loadItems()                -- private function loads items to lItems vector
+void setPath()                  -- private function sets a path through room objects
+void resetLevel()               -- resets the current level
+void generateLevel()            -- generates a new level
+void printLevel()               -- prints rooms that have been enter
+Room* getRoomPtr()              -- getter for roomPtr pointer property
+void setRoomPtr(Room* currRoom) -- setter for roomPtr pointer property
+vector<Enemy> getlEnemies()     -- getter for lEnemies vector property
+vector<Item> getlItems()        -- getter for lItems vector property
+
+-------------------------------------------------------------------------------
+/***** CLASS OtherFunctions *****/
+FILES: OtherFunctions.hpp OtherFunctions.cpp
+
+DESCRIPTION: This class is a collection of usefull functions for use through
+the program such as random number generation, file loading, string conversions,
+and mapping of directions and roomTypes.
+
+
+PROPERTIES:
+
+enum direction {NORTH, SOUTH, EAST, WEST, NODIR}
+enum roomType {START, EXIT, CORRIDOR, FORK, DEAD, NONE}
+
+int randNum
+string fileStr
+long oldseed
+int randDir
+map <string,roomType> dictionary
+map <direction,string> directionDict
+
+CONSTRUCTORS:
+
+OtherFunctions()				-- sets up dictionary's for the room type and
+direction list as well as assigns the randNum variable an initial value of zero
+and the fileStr an empty string
+
+FUNCTIONS:
+
+int getRandNum(int min, int max)    -- returns a random number between two values
+string loadFile(string fileName)    -- handles file input returns a string
+direction getRandDir()              -- returns a random direction
+string getStrFromRoomType(direction dirTStr)-- returns a string from a direction
+roomType getRoomTypeFromString(string rTStr)-- returns a room type from a string
+bool getBoolFromString(string bStr) -- checks whether a string is "true" returns
+a bool
+
+-------------------------------------------------------------------------------
+/***** CLASS CinReader *****/
+FILES: CinReader.h CinReader.cpp
+
+DESCRIPTION: This class handles user input from the keyboard. This class
+has been provided by the instructor.
+
+-------------------------------------------------------------------------------

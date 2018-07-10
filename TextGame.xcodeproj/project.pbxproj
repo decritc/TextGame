@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		65D323EE1CDAF54100EFF2A5 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D323ED1CDAF54100EFF2A5 /* main.cpp */; };
+		65D323F61CDAFBAF00EFF2A5 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D323F41CDAFBAF00EFF2A5 /* Player.cpp */; };
+		65D323F91CDAFBCB00EFF2A5 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D323F71CDAFBCB00EFF2A5 /* Enemy.cpp */; };
+		65D323FC1CDAFCC600EFF2A5 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D323FA1CDAFCC600EFF2A5 /* Map.cpp */; };
+		65D323FF1CDAFD0D00EFF2A5 /* GameManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D323FD1CDAFD0D00EFF2A5 /* GameManager.cpp */; };
+		65D324051CDB02E000EFF2A5 /* OtherFunctions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D324031CDB02E000EFF2A5 /* OtherFunctions.cpp */; };
+		65D3240A1CDB090800EFF2A5 /* Room.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D324081CDB090800EFF2A5 /* Room.cpp */; };
+		65D3240E1CDB095C00EFF2A5 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65D3240C1CDB095C00EFF2A5 /* Item.cpp */; };
+		65FFF62E1CDFD298001BEB21 /* CinReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 65FFF62C1CDFD298001BEB21 /* CinReader.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		65D323E81CDAF54100EFF2A5 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		652516161CEBDBE7002E827D /* Endless_Dungeon_api.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Endless_Dungeon_api.txt; sourceTree = "<group>"; };
+		65D323EA1CDAF54100EFF2A5 /* TextGame */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TextGame; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D323ED1CDAF54100EFF2A5 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		65D323F41CDAFBAF00EFF2A5 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		65D323F51CDAFBAF00EFF2A5 /* Player.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		65D323F71CDAFBCB00EFF2A5 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		65D323F81CDAFBCB00EFF2A5 /* Enemy.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Enemy.hpp; sourceTree = "<group>"; };
+		65D323FA1CDAFCC600EFF2A5 /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		65D323FB1CDAFCC600EFF2A5 /* Map.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Map.hpp; sourceTree = "<group>"; };
+		65D323FD1CDAFD0D00EFF2A5 /* GameManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameManager.cpp; sourceTree = "<group>"; };
+		65D323FE1CDAFD0D00EFF2A5 /* GameManager.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = GameManager.hpp; sourceTree = "<group>"; };
+		65D324031CDB02E000EFF2A5 /* OtherFunctions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OtherFunctions.cpp; sourceTree = "<group>"; };
+		65D324041CDB02E000EFF2A5 /* OtherFunctions.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = OtherFunctions.hpp; sourceTree = "<group>"; };
+		65D324081CDB090800EFF2A5 /* Room.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Room.cpp; sourceTree = "<group>"; };
+		65D324091CDB090800EFF2A5 /* Room.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Room.hpp; sourceTree = "<group>"; };
+		65D3240C1CDB095C00EFF2A5 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		65D3240D1CDB095C00EFF2A5 /* Item.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Item.hpp; sourceTree = "<group>"; };
+		65D324101CDB0C6B00EFF2A5 /* Items.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Items.txt; sourceTree = "<group>"; };
+		65D324111CDB0CA100EFF2A5 /* Rooms.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Rooms.txt; sourceTree = "<group>"; };
+		65D324131CDB16FC00EFF2A5 /* Enemies.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Enemies.txt; sourceTree = "<group>"; };
+		65FFF62C1CDFD298001BEB21 /* CinReader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CinReader.cpp; sourceTree = "<group>"; };
+		65FFF62D1CDFD298001BEB21 /* CinReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinReader.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		65D323E71CDAF54100EFF2A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		65D323E11CDAF54100EFF2A5 = {
+			isa = PBXGroup;
+			children = (
+				65D323EC1CDAF54100EFF2A5 /* TextGame */,
+				65D323EB1CDAF54100EFF2A5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		65D323EB1CDAF54100EFF2A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				65D323EA1CDAF54100EFF2A5 /* TextGame */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		65D323EC1CDAF54100EFF2A5 /* TextGame */ = {
+			isa = PBXGroup;
+			children = (
+				65D323ED1CDAF54100EFF2A5 /* main.cpp */,
+				65D323FD1CDAFD0D00EFF2A5 /* GameManager.cpp */,
+				65D323FE1CDAFD0D00EFF2A5 /* GameManager.hpp */,
+				65D324121CDB0CAF00EFF2A5 /* Text Files */,
+				65D3240F1CDB09F900EFF2A5 /* Characters */,
+				65D3240B1CDB093F00EFF2A5 /* Maping */,
+				65D324071CDB07E100EFF2A5 /* Functions */,
+				65D324061CDB07B300EFF2A5 /* CinReader */,
+			);
+			path = TextGame;
+			sourceTree = "<group>";
+		};
+		65D324061CDB07B300EFF2A5 /* CinReader */ = {
+			isa = PBXGroup;
+			children = (
+				65FFF62C1CDFD298001BEB21 /* CinReader.cpp */,
+				65FFF62D1CDFD298001BEB21 /* CinReader.h */,
+			);
+			name = CinReader;
+			sourceTree = "<group>";
+		};
+		65D324071CDB07E100EFF2A5 /* Functions */ = {
+			isa = PBXGroup;
+			children = (
+				65D324031CDB02E000EFF2A5 /* OtherFunctions.cpp */,
+				65D324041CDB02E000EFF2A5 /* OtherFunctions.hpp */,
+			);
+			name = Functions;
+			sourceTree = "<group>";
+		};
+		65D3240B1CDB093F00EFF2A5 /* Maping */ = {
+			isa = PBXGroup;
+			children = (
+				65D3240C1CDB095C00EFF2A5 /* Item.cpp */,
+				65D3240D1CDB095C00EFF2A5 /* Item.hpp */,
+				65D324081CDB090800EFF2A5 /* Room.cpp */,
+				65D324091CDB090800EFF2A5 /* Room.hpp */,
+				65D323FA1CDAFCC600EFF2A5 /* Map.cpp */,
+				65D323FB1CDAFCC600EFF2A5 /* Map.hpp */,
+			);
+			name = Maping;
+			sourceTree = "<group>";
+		};
+		65D3240F1CDB09F900EFF2A5 /* Characters */ = {
+			isa = PBXGroup;
+			children = (
+				65D323F41CDAFBAF00EFF2A5 /* Player.cpp */,
+				65D323F51CDAFBAF00EFF2A5 /* Player.hpp */,
+				65D323F71CDAFBCB00EFF2A5 /* Enemy.cpp */,
+				65D323F81CDAFBCB00EFF2A5 /* Enemy.hpp */,
+			);
+			name = Characters;
+			sourceTree = "<group>";
+		};
+		65D324121CDB0CAF00EFF2A5 /* Text Files */ = {
+			isa = PBXGroup;
+			children = (
+				65D324101CDB0C6B00EFF2A5 /* Items.txt */,
+				652516161CEBDBE7002E827D /* Endless_Dungeon_api.txt */,
+				65D324111CDB0CA100EFF2A5 /* Rooms.txt */,
+				65D324131CDB16FC00EFF2A5 /* Enemies.txt */,
+			);
+			name = "Text Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		65D323E91CDAF54100EFF2A5 /* TextGame */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 65D323F11CDAF54100EFF2A5 /* Build configuration list for PBXNativeTarget "TextGame" */;
+			buildPhases = (
+				65D323E61CDAF54100EFF2A5 /* Sources */,
+				65D323E71CDAF54100EFF2A5 /* Frameworks */,
+				65D323E81CDAF54100EFF2A5 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TextGame;
+			productName = TextGame;
+			productReference = 65D323EA1CDAF54100EFF2A5 /* TextGame */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		65D323E21CDAF54100EFF2A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Derek Critchfield";
+				TargetAttributes = {
+					65D323E91CDAF54100EFF2A5 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = 65D323E51CDAF54100EFF2A5 /* Build configuration list for PBXProject "TextGame" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 65D323E11CDAF54100EFF2A5;
+			productRefGroup = 65D323EB1CDAF54100EFF2A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				65D323E91CDAF54100EFF2A5 /* TextGame */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		65D323E61CDAF54100EFF2A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				65D323F91CDAFBCB00EFF2A5 /* Enemy.cpp in Sources */,
+				65D323FF1CDAFD0D00EFF2A5 /* GameManager.cpp in Sources */,
+				65D323F61CDAFBAF00EFF2A5 /* Player.cpp in Sources */,
+				65D323FC1CDAFCC600EFF2A5 /* Map.cpp in Sources */,
+				65D324051CDB02E000EFF2A5 /* OtherFunctions.cpp in Sources */,
+				65D323EE1CDAF54100EFF2A5 /* main.cpp in Sources */,
+				65FFF62E1CDFD298001BEB21 /* CinReader.cpp in Sources */,
+				65D3240E1CDB095C00EFF2A5 /* Item.cpp in Sources */,
+				65D3240A1CDB090800EFF2A5 /* Room.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		65D323EF1CDAF54100EFF2A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		65D323F01CDAF54100EFF2A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		65D323F21CDAF54100EFF2A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		65D323F31CDAF54100EFF2A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		65D323E51CDAF54100EFF2A5 /* Build configuration list for PBXProject "TextGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D323EF1CDAF54100EFF2A5 /* Debug */,
+				65D323F01CDAF54100EFF2A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		65D323F11CDAF54100EFF2A5 /* Build configuration list for PBXNativeTarget "TextGame" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				65D323F21CDAF54100EFF2A5 /* Debug */,
+				65D323F31CDAF54100EFF2A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 65D323E21CDAF54100EFF2A5 /* Project object */;
+}

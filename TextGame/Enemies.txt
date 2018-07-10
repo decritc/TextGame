@@ -1,0 +1,25 @@
+NumberOfEnemyTypes= 3
+
+name= SKELETON
+health= 10
+isAlive= 1
+level= 1
+armor= 2
+block= 2
+attack= 2
+
+name= ZOMBIE
+health= 20
+isAlive= 1
+level= 1
+armor= 3
+block= 3
+attack= 4
+
+name= CAVE TROLL
+health= 20
+isAlive= 1
+level= 1
+armor= 6
+block= 3
+attack= 6

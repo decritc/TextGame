@@ -1,0 +1,36 @@
+numberOfRooms= 7
+
+name= Entrance
+description= An empty room, a staircase has been sealed off behind you leading up.
+numberExits= 1
+rType= START
+
+name= Exit
+description= The end of the maze, there is a staircase going down.
+numberExits= 0
+rType= EXIT
+
+name= Corridor
+description= A corridor that is dimly lit.
+numberExits= 1
+rType= CORRIDOR
+
+name= Corridor 2
+description= A corridor that is dimly lit, there is a strange odor coming from one of the adjacent rooms.
+numberExits= 1
+rType= CORRIDOR
+
+name= Passage
+description= A passage that is dimly lit.
+numberExits= 2
+rType= FORK
+
+name= Passage 2
+description= A passage that is lit by a strange glow but the source can not be determined.
+numberExits= 2
+rType= FORK
+
+name= Dead End
+description= A dead end, the only way out is behind you.
+numberExits= 0
+rType= DEAD
